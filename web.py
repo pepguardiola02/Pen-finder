@@ -4,10 +4,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello, World!"
+    return "<h1>Hello, World!</h1>"
 
 @app.route("/hejhej")
-def Hej():
+def hej():
     return "Hej på dig lazar!"
 
 
