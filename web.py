@@ -3,12 +3,14 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route("/")
-def hello():
-    return "<h-1>Hello, World! How are you?</h-1>"
+def hej():
+    return "<title>Pen-finder</title> <header>Pen-Finder</header> "
 
 @app.route("/hejhej")
-def hej():
-    return "Hej på dig lazar!"
+def hello():
+    return "<h1>Hello, World!</h1>"
+
+
 
 
 app.run()
