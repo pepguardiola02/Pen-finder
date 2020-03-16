@@ -1,10 +1,17 @@
-from flask import Flask
+from flask import Flask , request
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods=['POST', 'GET'])
 def hej():
-    return "<title>Pen-finder</title> <header>Pen-Finder</header> "
+    if request.methods == 'POST':
+        return
+    else: 
+        return
+
+    return "<title>Pen-finder</title> <header>Pen-Finder</header>"   
+
+
 
 @app.route("/hejhej")
 def hello():
