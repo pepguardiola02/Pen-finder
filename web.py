@@ -1,23 +1,13 @@
-from flask import Flask , request
+from flask import Flask , redirect, url_for, render_template
 
 app = Flask(__name__)
 
-@app.route("/", methods=['POST', 'GET'])
-def hej():
-    if request.methods == 'POST':
-        return
-    else: 
-        return
 
-    return "<title>Pen-finder</title> <header>Pen-Finder</header>"   
+@app.route("/")
+def home():
+    return render_template("index.html")
 
 
 
-@app.route("/hejhej")
-def hello():
-    return "<h1>Hello, World!</h1>"
-
-
-
-
-app.run()
+if __name__ == "__main__":
+    app.run()
